@@ -8,12 +8,12 @@
     "test": "jest"
   },
   "jest": {
-    "maxConcurrency":5,
+    "maxConcurrency": 5,
     "verbose": true,
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
-    "collectCoverage":false,
+    "collectCoverage": false,
     "coverageThreshold": {
       "global": {
         "branches": 100,
@@ -25,7 +25,7 @@
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "vendor/**/*.{js,jsx}"
-     ]    
+    ]
   },
   "repository": {
     "type": "git",
@@ -46,7 +46,12 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
+    "@types/jest": "^29.5.6",
+    "@types/mustache": "^4.2.4",
     "babel-jest": "^29.0.3",
     "jest": "^29.0.3"
+  },
+  "dependencies": {
+    "mustache": "^4.2.0"
   }
 }
