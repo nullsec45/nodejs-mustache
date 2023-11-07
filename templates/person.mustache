@@ -9,7 +9,10 @@
 
 <body>
 {{#person}}
-    Hello Person
+    Hello Person {{name}}!
+{{/person}}
+{{^person}}
+    Hello Guest
 {{/person}}
 </body>
 
