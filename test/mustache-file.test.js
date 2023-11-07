@@ -34,5 +34,29 @@ test("Swction Show", async () => {
     });
 
     console.info(data);
-    expect(data).toContain("Hello Person");
+    expect(data).toContain("Hello Person Fajar!");
+})
+
+test("Inverted Sections", async () => {
+    const helloTemplate = await fs.readFile("./templates/person.mustache")
+        .then(data => data.toString());
+
+    const data = Mustache.render(helloTemplate, {});
+
+    console.info(data);
+    expect(data).toContain("Hello Guest")
+})
+
+test("List", async () => {
+    const helloTemplate = await fs.readFile("./templates/hobbies.mustache")
+        .then(data => data.toString());
+
+    const data = Mustache.render(helloTemplate, {
+        hobbies: ["Ngoding", "Baca", "Makan"]
+    });
+    console.info(data);
+
+    expect(data).toContain("Ngoding")
+    expect(data).toContain("Baca")
+    expect(data).toContain("Makan")
 })
